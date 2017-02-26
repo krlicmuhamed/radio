@@ -14,10 +14,8 @@ void setup() {
     Serial.println("Transmitter ready");
   }
   // Initialize the IO and ISR
-  vw_setup(BIT_RATE); // Bits per sec
   vw_set_tx_pin(TX_RADIO);
-  vw_set_rx_pin(RX_RADIO);
-  vw_rx_start(); // Start the receiver
+  vw_setup(BIT_RATE); // Bits per sec
 }
 
 // Non-blocking, ftw!
